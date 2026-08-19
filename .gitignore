@@ -1,0 +1,31 @@
+# Local and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.tmp
+*.bak
+
+# Runtime and private data accidentally created beside documentation
+Logs/
+Pals/
+Players/
+Plugins/
+RESTAPI/
+*.log
+*.json
+!docs/**/*.json
+
+# Build and debug outputs
+build/
+out/
+*.pdb
+*.lib
+*.exp
+*.ilk
+*.obj
+*.exe
+
+# Python cache from local experiments
+__pycache__/
+*.py[cod]

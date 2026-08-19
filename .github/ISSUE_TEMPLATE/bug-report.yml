@@ -1,0 +1,76 @@
+name: 错误报告
+description: 报告可复现的安装、配置或接口问题
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先删除令牌、玩家 IP、Steam/EOS 标识和私人游戏数据。安全漏洞请使用私密安全报告，不要创建公开 Issue。
+  - type: input
+    id: psbre_version
+    attributes:
+      label: PalServerBridgeRE 版本
+      placeholder: 例如 0.5.0
+    validations:
+      required: true
+  - type: input
+    id: server_version
+    attributes:
+      label: Palworld 专用服务器版本
+    validations:
+      required: true
+  - type: input
+    id: ue4ss_version
+    attributes:
+      label: UE4SS 版本
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 问题区域
+      options:
+        - 安装或加载
+        - REST 配置或鉴权
+        - 玩家
+        - 通知
+        - 帕鲁
+        - 物品
+        - 测试工具
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 写明最小复现步骤；不要粘贴有效令牌。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+      description: 可提供 HTTP 状态、error.code 和脱敏响应。
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 脱敏日志
+      render: text
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已删除令牌、服务器公网地址、玩家 IP、玩家标识和私人游戏数据。
+          required: true
