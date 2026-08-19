@@ -6,6 +6,7 @@
 2. 确认模组根目录存在 `enabled.txt`，并且 `dlls/main.dll` 存在。
 3. 确认使用 Windows x64 专用服务器和兼容的 UE4SS。
 4. 查看 UE4SS 日志中的第一条 PalServerBridgeRE 错误。
+5. 查看模组目录 `dlls/Logs/<启动时间戳>.log`，确认启动和模块加载停在哪一步。
 
 本仓库只提供文档，不提供 DLL 或本地图形测试工具。不要尝试从 GitHub 文档仓库寻找模组文件。
 
@@ -18,6 +19,8 @@
 3. 确认令牌长度和 JSON 格式有效。
 4. 检查全局和令牌的 `allowed_ips`。
 5. 重启服务器。
+
+通用日志会记录每个模块的 `Loading module`、`Module loaded` 或 `Module failed to load`；REST 服务的详细鉴权和请求结果则查看同一启动批次下的 `Logs/RESTAPI/` 日志。
 
 ## HTTP 状态码
 
